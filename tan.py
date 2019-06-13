@@ -17,6 +17,7 @@
 import os
 import sys
 import subprocess
+import threading
 
 WINDOWS = os.name == 'nt'
 LINUX = sys.platform.startswith('linux')
@@ -30,14 +31,7 @@ OPENBSD = sys.platform.startswith('openbsd')
 AIX = sys.platform.startswith('aix')
 
 
-def cli():
-    try:
-        assert sys.version_info.major >= 3
-        assert sys.version_info.minor >= 6
-    except Exception as ex:
-        print("Tan only support 3.6+!")
-        return
-
+def tan():
     if WINDOWS:
         subprocess.call(['explorer', os.curdir], stderr=None, stdout=None)
 
@@ -49,6 +43,17 @@ def cli():
 
     else:
         print("Unknown Operation System ")
+
+
+def cli():
+    try:
+        assert sys.version_info.major >= 3
+        assert sys.version_info.minor >= 6
+    except Exception as ex:
+        print("Tan only support 3.6+!")
+        return
+
+    threading.Thread(target=tan, args=()).start()
 
 
 if __name__ == '__main__':

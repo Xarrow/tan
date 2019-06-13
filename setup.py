@@ -83,7 +83,7 @@ class UploadCommand(Command):
 
 
 setup(
-    name="tan",
+    name="tan_up",
     version=about["__version__"],
     description="A tool of opening current folder in terminal",
     long_description=long_description,
@@ -102,7 +102,7 @@ setup(
         'Programming Language :: Python :: Implementation :: PyPy'
     ],
     install_requires=[],
-    keywords=["tan", "opening current folder in terminal"],
+    keywords=["tan", "popup window", "opening current folder in terminal"],
     # If your package is a single module, use this instead of 'packages':
     py_modules=['tan', ],
     # If your package has custom module ,
