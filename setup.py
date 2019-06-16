@@ -73,7 +73,8 @@ class UploadCommand(Command):
             pass
 
         self.status("Building Source distribution…")
-        os.system("{0} setup.py sdist bdist_wheel bdist_wininst".format(sys.executable))
+        os.system("{0} setup.py sdist bdist_wheel".format(sys.executable))
+        # os.system("{0} setup.py sdist bdist_wheel bdist_wininst".format(sys.executable))
         self.status("Uploading the package to PyPI via Twine…")
         os.system("twine upload dist/*")
         self.status("Pushing git tags…")
