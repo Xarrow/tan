@@ -35,5 +35,9 @@ python setup.py install
 2. Mac
 # TODO
 
+### 开源代码
+
+* [pyperclip](https://github.com/asweigart/pyperclip)
+
 ### LICENSE
 MIT

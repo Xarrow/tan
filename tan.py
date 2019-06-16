@@ -18,6 +18,7 @@ import os
 import sys
 import subprocess
 import threading
+import pyperclip
 
 WINDOWS = os.name == 'nt'
 LINUX = sys.platform.startswith('linux')
@@ -45,7 +46,7 @@ def tan():
         print("Unknown Operation System ")
 
 
-def cli():
+def tan_cli():
     try:
         assert sys.version_info.major >= 3
         assert sys.version_info.minor >= 6
@@ -55,6 +56,13 @@ def cli():
 
     threading.Thread(target=tan, args=()).start()
 
+def tancp_cli():
+    try:
+        assert sys.version_info.major >= 3
+        assert sys.version_info.minor >= 6
+    except Exception as ex:
+        print("Tan only support 3.6+!")
+        return
+    pyperclip.copy(os.path.abspath(os.curdir))
 
-if __name__ == '__main__':
-    cli()
+

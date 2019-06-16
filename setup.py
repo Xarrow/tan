@@ -116,7 +116,7 @@ setup(
     },
     # packing to command tool interface
     entry_points={
-        'console_scripts': ['tan=tan:cli']
+        'console_scripts': ['tan=tan:tan_cli','tancp=tan:tancp_cli']
     }
 
 )
