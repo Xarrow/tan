@@ -3,7 +3,9 @@
 -----
 
 > 弹出一个世界。
+
 > 开发者快速在 terminal 中打开当前目录，只需要输入 `tan`，提高开发效率。
+
 > 此工具只支持 Python 3.6+。
 
 
@@ -38,6 +40,10 @@ python setup.py install
 ### 开源代码
 
 * [pyperclip](https://github.com/asweigart/pyperclip)
+
+* [terminaltables](https://github.com/Robpol86/terminaltables)
+
+* [colorama](https://github.com/tartley/colorama)
 
 ### LICENSE
 MIT

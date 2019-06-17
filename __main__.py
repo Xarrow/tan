@@ -7,8 +7,9 @@
  File: __main__.py
  Time: 2019/6/16
 """
-from tan import tan_cli, tancp_cli
+from tan import *
 
 if __name__ == '__main__':
     tan_cli()
     tancp_cli()
+    tanls_cli()
