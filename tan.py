@@ -23,7 +23,6 @@ import time
 
 import pyperclip
 import argparse
-from colorama import init, Fore, Back, Style
 
 WINDOWS = os.name == 'nt'
 LINUX = sys.platform.startswith('linux')
@@ -99,24 +98,22 @@ def tanls_cli():
     if not os.path.isdir(abs_path):
         return
 
-    title_msg = msg_align(Fore.BLUE + "FileName", 70) + msg_align(Fore.GREEN + "FileSize", 35)
+    title_msg = msg_align("FileName", 70) + msg_align("FileSize", 35)
     print(title_msg)
 
     for file in os.listdir(abs_path):
         abs_file_path = os.path.join(abs_path, file)
 
-        data_msg = Fore.BLUE + abs_file_path
+        data_msg = abs_file_path
         item_msg = msg_align(data_msg, 70)
 
         if os.path.isfile(abs_file_path):
             file_size = os.path.getsize(abs_file_path)
 
-            begin_msg = "{fore}{data_msg}".format(
-                fore=Fore.GREEN,
+            begin_msg = "{data_msg}".format(
                 data_msg=data_msg)
 
-            last_msg = "{fore}{size}".format(
-                fore=Fore.GREEN,
+            last_msg = "{size}".format(
                 size=file_size)
 
             last_msg = msg_align(last_msg, 15) + "bytes"
