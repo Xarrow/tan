@@ -29,11 +29,27 @@ python setup.py install
 
 ### 快速使用
 
-1. Windows
-# TODO
+1. 在终端中打开当前路径
 
-2. Mac
-# TODO
+```bash
+$ tan
+```
+
+2. 在终端中复制当前路径
+
+```bash
+$ tancp
+```
+
+3. 列出当前目录下的文件（Beta 版本，主要用于 Windows）
+
+```bash
+$ tanls
+```
+
+4. 其他
+TODO
+
 
 ### 开源代码
 
